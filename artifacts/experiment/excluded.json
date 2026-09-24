@@ -1,0 +1,534 @@
+[
+  {
+    "slug": "aligote-barrel-2024",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "agora-yachting-cabernet-sauvignon",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "agora-yachting-sauvignon",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "agora-muskat",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "arie-vyderzhka-bochka-francziya-2020",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "abrau-dyurso-az-abrau-bayanshira-beloe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "abrau-dyurso-az-abrau-madrasa-krasnoe-suhoe-14",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "cabernet-franc-pinot-noir-2021",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "cabernet-franc-pinot-noir-2022",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "chateau-tamagne-eno-traminer-i-shardone",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "esse-demi-sec-muscat-nectar-muskat-belyy-beloe-ekstra-bryut-115",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "grand-jete-blanc-de-blancs",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "grand-jete-cuvee",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "agrolayn-heritage-dg-skin-contact-red-saperavi-krasnoe-suhoe-13",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "agrolayn-heritage-dg-skin-contact-rkatsiteli-rkatsiteli-krasnoe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "leto-kaberne-fran-2021-suhoe-krasnoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "leto-vecrfn-2024-suhoe-vino",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "magnatum-blanc-de-blancs",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "mancopia-kaberne-sovinon",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "mancopia-saperavi",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "method-classic-kokur",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "millstream-cellar-rezerv-blend-4",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "agrolayn-mountain-eagle-semillon-semilon-beloe-suhoe-11",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "agrolayn-mountain-eagle-traminer-traminer-beloe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "esse-muskat-muskat-belyy-beloe-ekstra-bryut-115",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "belmas-winery-pn-pino-nuar-krasnoe-suhoe-135",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "belmas-winery-riesling-katya-risling-beloe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "belmas-winery-syrah-katya-sira-krasnoe-suhoe-125",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "uva-vallis-shardone",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "vermentino-viognier-2022",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "belmas-winery-vi-vione-beloe-suhoe-122",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "vibes-silvaner-barrel-fermented-2022",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "vibes-vermentino-viognier-barrel-fermented-2022",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "vibes-montepulchano-kaberne-fran-pti-verdo",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "shato-pino-aligote-rkatsiteli-beloe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "shato-pino-aligote-rkatsiteli-suhoe-beloe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "aligote-avtorskoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "aligote-barrel-2025",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "aligote-avtorskoe-vino",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "aratti-shardone-beloe-suhoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "kuban-vino-aristov-kaberne-sovinon-roze-rozovoe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "kuban-vino-aristov-kaberne-sovinon-roze-2020-rozovoe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "balaklava-muskat",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "balaklava-pino-nuar",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "beloe-polusladkoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "bryut-rozovoe-zolotaya-balka",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "bukovinka",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "vinodelnya-byurne-vione-beloe-suhoe-135",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "b-yu-rne-krasnostop-suhoe-krasnoe-classic",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "vinodelnya-byurne-byurne-pino-blan-beloe-suhoe-14",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "b-yu-rne-pino-gri-beloe-suhoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "vinodelnya-vedernikov-vedernikov-tsimlyanskiy-chyornyy-tsimlyanskiy-chernyy-krasnoe-suhoe-14",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "skalistyy-bereg-veter-v-travah-kaberne-fran-krasnoe-suhoe-13",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "oxana-istratova-wine-vione-2023-oranzhevoe-suhoe-119",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "oxana-istratova-wine-vione-2024-oranzhevoe-suhoe-13",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "vysokij-bereg-risling-zelenaya-seriya-1",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "glera-manno",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "shato-pino-gravitatsiya-kaberne-sovinon-merlo-krasnoe-suhoe-135",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "shato-ay-danil-grenash-krasnoe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "di-kaspiko-di-caspico-fiori-di-mare-verde",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "igristoe-vino-bryut-beloe-di-kaspiko-blan-de-blan-di-caspico-blanc-de-blancs",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "igristoe-vino-bryut-rozovoe-di-kaspiko-blan-de-nuar-di-caspico-blanc-de-noirs",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "zhemchuzhnaya-9-aligote-czitron",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "zhemchuzhnaya-9-kaberne-sovinon-pino-nuar",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "zhemchuzhnaya-9-czitron-shardone",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "zb-vajn-risling-polusuhoe-beloe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "zb-vajn-roze-suhoe-rozovoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "zb-vajn-spumante-polusuhoe-beloe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "igristoe-vino-ekstra-bryut-beloe-di-caspico",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "twopeters_kaberne_sovinion",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "kaberne-sovinon-2",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "shato-pino-kaberne-sovinon-merlo-krasnoe-suhoe-135",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "villa-urkusta-kaberne-sovinon-klassik-krasnoe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "villa-urkusta-kaberne-sovinon-klassik-krasnoe-suhoe-139",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "kokur-suhoe-2025",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "kokur-2025",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "krasnostop-zolotovskij",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "chateau-le-grand-vostock-krasnostop-rezerv-krasnoe-suhoe-145",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "legato-legato-sovinon-blan-beloe-suhoe-125",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "legato-legato-sovinon-blan-mtsvane-beloe-suhoe-125",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "lesnaya-proseka",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "katharon-mezenka-risling-polusuhoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "katharon-mezenka-risling-suhoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "merlo",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "merlo-1",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "soyuz-vino-mosavali-saperavi-polusladkoe-krasnoe-11",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "novyj-svet-vyderzhannoe-bryut",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "novyj-svet-polusladkoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "oleg",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "ona-skazala-da",
+    "reason": "geometry_filter"
+  },
+  {
+    "slug": "pino-nuar",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "pino-nuar-2025",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "pobeda",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "pozdnij-sbor-beloe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "pozdnij-sbor-krasnoe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "polusladkoe-beloe-zolotaya-balka",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "polusladkoe-krasnoe-zb-vajn-frizzante",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "polusladkoe-krasnoe-zolotaya-balka",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "polusladkoe-rozovoe-zolotaya-balka",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "polusuhoe-beloe-zolotaya-balka",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "polusuhoe-rozovoe-zb-vajn-frizzante",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "sober-bash-puhlyakovskiy-beloe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "rebo-rezerv",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "risling-1",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "sober-bash-risling-risling-reynskiy-beloe-suhoe-11",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "risling",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "oxana-istratova-wine-rkatsiteli-2023-oranzhevoe-suhoe-113",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "oxana-istratova-wine-rkatsiteli-2024-oranzhevoe-suhoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "roze-2",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "rozovoe-zoloto",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "rozovoe-polusladkoe-2",
+    "reason": "geometry_filter"
+  },
+  {
+    "slug": "rubin-golodrigi",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "rustok-glera-ru-140",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "sand-zh-oveze-rezerv",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "twopeters_saperavi",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "sovinon-blan-krasnaya-gorka",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "soyuz-vino-soyuz-vino-kaberne-sovinon-beg-in-boks-krasnoe-suhoe-11",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "soyuz-vino-soyuz-vino-kaberne-sovinon-polusladkoe-beg-in-boks-krasnoe-12",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "soyuz-vino-soyuz-vino-shardone-suhoe-beg-in-boks-beloe-11",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "suhoe-beloe-zb-vajn-frizzante",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "fanagoriya-fanagoriya-hey-bey-shardone-beloe-suhoe-13",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "sober-bash-hihvi-beloe-suhoe-15",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "sober-bash-hihvi-amfora-beloe-suhoe-14",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "czitronnyj-magaracha",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "twopeters_shardone",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "shardone-balaklava",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "skalistyy-bereg-shyopot-tsvetov-risling-beloe-suhoe-109",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "igristoe-vino-endemy-bianka-bryut-beloe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "derbent-vino-endemy-merlo-krasnoe-suhoe-13",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "igristoe-vino-endemy-pino-blan-bryut-beloe",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "derbent-vino-endemy-saperavi-krasnoe-suhoe-13",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "derbent-vino-endemy-shardone-beloe-suhoe-13",
+    "reason": "ambiguous_missing_or_content_conflict"
+  },
+  {
+    "slug": "derbent-vino-endemy-shardone-beloe-bryut-105-125",
+    "reason": "ambiguous_missing_or_content_conflict"
+  }
+]

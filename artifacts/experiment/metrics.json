@@ -1,0 +1,191 @@
+{
+  "evaluation_type": "synthetic_source_disjoint_not_field_accuracy",
+  "provisional_filename_labels": true,
+  "seed": 42,
+  "split_counts": {
+    "train": 1382,
+    "validation": 295,
+    "test": 293
+  },
+  "baseline_validation": {
+    "queries": 590,
+    "sources": 295,
+    "accuracy_at_1": 0.9288135593220339,
+    "recall_at_5": 0.9983050847457627
+  },
+  "best_epoch": 13,
+  "baseline_test": {
+    "queries": 586,
+    "sources": 293,
+    "accuracy_at_1": 0.9078498293515358,
+    "recall_at_5": 0.9982935153583617
+  },
+  "selected_test": {
+    "queries": 586,
+    "sources": 293,
+    "accuracy_at_1": 0.931740614334471,
+    "recall_at_5": 1.0
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 1.4413473497737537,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9271186440677966,
+        "recall_at_5": 0.9983050847457627
+      }
+    },
+    {
+      "epoch": 2,
+      "loss": 1.0714351697401567,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9271186440677966,
+        "recall_at_5": 0.9966101694915255
+      }
+    },
+    {
+      "epoch": 3,
+      "loss": 0.7433552308516069,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9288135593220339,
+        "recall_at_5": 0.9966101694915255
+      }
+    },
+    {
+      "epoch": 4,
+      "loss": 0.571203971450979,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9288135593220339,
+        "recall_at_5": 0.9966101694915255
+      }
+    },
+    {
+      "epoch": 5,
+      "loss": 0.45233971964229236,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9271186440677966,
+        "recall_at_5": 0.9966101694915255
+      }
+    },
+    {
+      "epoch": 6,
+      "loss": 0.36863031170584937,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9271186440677966,
+        "recall_at_5": 0.9966101694915255
+      }
+    },
+    {
+      "epoch": 7,
+      "loss": 0.30404675006866455,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9288135593220339,
+        "recall_at_5": 0.9966101694915255
+      }
+    },
+    {
+      "epoch": 8,
+      "loss": 0.23100047219883313,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9288135593220339,
+        "recall_at_5": 1.0
+      }
+    },
+    {
+      "epoch": 9,
+      "loss": 0.16757284849882126,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9288135593220339,
+        "recall_at_5": 1.0
+      }
+    },
+    {
+      "epoch": 10,
+      "loss": 0.11689740283922716,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9322033898305084,
+        "recall_at_5": 1.0
+      }
+    },
+    {
+      "epoch": 11,
+      "loss": 0.09169747274030339,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9338983050847458,
+        "recall_at_5": 1.0
+      }
+    },
+    {
+      "epoch": 12,
+      "loss": 0.0750602741133083,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9322033898305084,
+        "recall_at_5": 1.0
+      }
+    },
+    {
+      "epoch": 13,
+      "loss": 0.07228494571013884,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9372881355932203,
+        "recall_at_5": 1.0
+      }
+    },
+    {
+      "epoch": 14,
+      "loss": 0.06545061042362993,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9355932203389831,
+        "recall_at_5": 1.0
+      }
+    },
+    {
+      "epoch": 15,
+      "loss": 0.06943580305034464,
+      "validation": {
+        "queries": 590,
+        "sources": 295,
+        "accuracy_at_1": 0.9372881355932203,
+        "recall_at_5": 1.0
+      }
+    }
+  ],
+  "encoder_frozen": true,
+  "trainable_parameters": 394240,
+  "torch": "2.11.0+cu128",
+  "device": "cuda",
+  "source_revision": {
+    "model_id": "google/siglip2-base-patch16-384",
+    "revision": "f775b65a79762255128c981547af89addcfe0f88",
+    "weights_sha256": "ed72c0ace85020ae610fc817c2538b9cae5a477b012a50859c60af5b3ad30857"
+  },
+  "manifest_sha256": "54012a27ed6354d1af9e2d6f859617eeb090939b65bd442e24c692e5982f1e3b"
+}

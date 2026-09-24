@@ -1,1 +1,9 @@
 data/
+.venv/
+.cache/
+__pycache__/
+.idea/
+tmp/
+artifacts/**/*.pt
+artifacts/**/*.npz
+artifacts/base_model/

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Сканер российского вина</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <main>
+    <header><span>СВОЁ ВИНО</span><small>экспериментальный сканер</small></header>
+    <section class="hero">
+      <p class="eyebrow">ABOBAMAKERS</p>
+      <h1>Узнайте вино<br>по этикетке</h1>
+      <p>Сфотографируйте одну бутылку по центру кадра. Лучше без бликов и соседних этикеток.</p>
+      <label class="upload"><input id="image" type="file" accept="image/*" capture="environment"><b>Выбрать или снять фото</b><span>JPG, PNG, WEBP · до 20 МБ</span></label>
+      <img id="preview" alt="Предпросмотр фотографии" hidden>
+      <button id="scan" disabled>Распознать</button>
+      <p id="message" role="status"></p>
+    </section>
+    <section id="result" class="card" hidden>
+      <p id="state" class="state"></p>
+      <h2 id="title"></h2>
+      <dl><div><dt>Винодельня</dt><dd id="winery"></dd></div><div><dt>Регион</dt><dd id="region"></dd></div><div><dt>Виноград</dt><dd id="grape"></dd></div><div><dt>Категория</dt><dd id="category"></dd></div></dl>
+      <p id="description"></p>
+      <details><summary>Почему такой результат?</summary><p id="diagnostics"></p></details>
+      <hr>
+      <h3>К чему подать?</h3>
+      <div class="pairing"><input id="dish" placeholder="Например: запечённая рыба"><button id="pair">Подобрать</button></div>
+      <p id="pairing-result"></p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

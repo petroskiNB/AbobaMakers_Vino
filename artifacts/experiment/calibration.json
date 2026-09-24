@@ -1,0 +1,49 @@
+{
+  "scope": "known_wines_synthetic_validation_only",
+  "cannot_calibrate_unknown_wine_rejection": true,
+  "target_precision": 0.95,
+  "top1_similarity": {
+    "threshold": 0.8171654939651489,
+    "precision": 0.9534883499145508,
+    "coverage": 0.29152542372881357,
+    "accepted": 172
+  },
+  "margin": {
+    "threshold": 0.00573420524597168,
+    "precision": 0.9505300521850586,
+    "coverage": 0.9593220338983051,
+    "accepted": 566
+  },
+  "test_at_validation_margin_threshold": {
+    "accepted": 563,
+    "coverage": 0.9607508532423208,
+    "precision_among_accepted": 0.9484902024269104
+  },
+  "selected_validation": {
+    "queries": 590,
+    "accuracy_at_1": 0.9372881650924683,
+    "recall_at_5": 1.0,
+    "mrr_at_5": 0.9669491648674011,
+    "macro_f1": 0.9491525423728814,
+    "mean_top1_similarity": 0.7649500370025635,
+    "mean_margin": 0.14620868861675262
+  },
+  "selected_test": {
+    "queries": 586,
+    "accuracy_at_1": 0.9317406415939331,
+    "recall_at_5": 1.0,
+    "mrr_at_5": 0.9630261063575745,
+    "macro_f1": 0.9474402730375427,
+    "mean_top1_similarity": 0.7718549370765686,
+    "mean_margin": 0.14573004841804504
+  },
+  "baseline_test": {
+    "queries": 586,
+    "accuracy_at_1": 0.9078498482704163,
+    "recall_at_5": 0.9982935190200806,
+    "mrr_at_5": 0.947297990322113,
+    "macro_f1": 0.9250446936453763,
+    "mean_top1_similarity": 0.9162724614143372,
+    "mean_margin": 0.05030472204089165
+  }
+}

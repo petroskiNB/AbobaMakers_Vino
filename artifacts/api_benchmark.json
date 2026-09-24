@@ -1,0 +1,42 @@
+{
+  "requests": 6,
+  "warm_sequential": true,
+  "mean_ms": 1054.2239166679792,
+  "median_p50_ms": 1055.719199939631,
+  "p95_nearest_rank_ms": 1120.7365000154823,
+  "min_ms": 990.604400052689,
+  "max_ms": 1120.7365000154823,
+  "measurements": [
+    {
+      "image": "019c68d0.jpg",
+      "latency_ms": 1065.3989999555051,
+      "slug": "usadba-mezyb-shishka-pino-nuar-rozovoe-suhoe-115"
+    },
+    {
+      "image": "02eef911.webp",
+      "latency_ms": 1107.0796999847516,
+      "slug": "massandra-portveyn-belyy-gurzuf-kokur-belyy-beloe-sladkoe-135"
+    },
+    {
+      "image": "096ca74e.jpg",
+      "latency_ms": 995.4845000756904,
+      "slug": "shato-ay-danil-bomond-aligote-beloe-suhoe-13"
+    },
+    {
+      "image": "019c68d0.jpg",
+      "latency_ms": 1046.0393999237567,
+      "slug": "usadba-mezyb-shishka-pino-nuar-rozovoe-suhoe-115"
+    },
+    {
+      "image": "02eef911.webp",
+      "latency_ms": 1120.7365000154823,
+      "slug": "massandra-portveyn-belyy-gurzuf-kokur-belyy-beloe-sladkoe-135"
+    },
+    {
+      "image": "096ca74e.jpg",
+      "latency_ms": 990.604400052689,
+      "slug": "shato-ay-danil-bomond-aligote-beloe-suhoe-13"
+    }
+  ],
+  "note": "Three public images repeated twice; not a load or accuracy test."
+}

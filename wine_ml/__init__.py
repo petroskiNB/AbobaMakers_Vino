@@ -1,0 +1,1 @@
+"""Wine image retrieval experiments."""

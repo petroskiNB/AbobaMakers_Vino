@@ -1,0 +1,23 @@
+[
+  {
+    "query_id": "q-000001",
+    "visible_label": "Табия; Пино Нуар; 2025",
+    "catalog_exact_name_or_slug_found": false,
+    "related_catalog_entity": "Винодельня Табия присутствует, карточки Табия Пино Нуар 2025 нет",
+    "ground_truth_available": false
+  },
+  {
+    "query_id": "q-000002",
+    "visible_label": "Мускатель Массандра белый; 2023",
+    "catalog_exact_name_or_slug_found": true,
+    "matching_slug": "massandra-muskatel-belyy-belye-sorta-vinograda-beloe-sladkoe-16",
+    "ground_truth_available": false
+  },
+  {
+    "query_id": "q-000003",
+    "visible_label": "ARISTOV DONUM XXIV; брют; 2023",
+    "catalog_exact_name_or_slug_found": false,
+    "related_catalog_entity": "Карточки ARISTOV присутствуют, DONUM XXIV отсутствует",
+    "ground_truth_available": false
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "image": "019c68d0.jpg",
+    "baseline_top5": [
+      {
+        "slug": "usadba-mezyb-shishka-pino-nuar-rozovoe-suhoe-115",
+        "similarity": 0.4892476797103882
+      },
+      {
+        "slug": "usadba-mezyb-shishka-oranzh-shardone-beloe-suhoe-127",
+        "similarity": 0.4358159899711609
+      },
+      {
+        "slug": "usadba-mezyb-shishka-kupazh-5-kaberne-sovinon-rozovoe-suhoe-133",
+        "similarity": 0.4066271185874939
+      },
+      {
+        "slug": "zhemchuzhnaya-9-pino-nuar-muskat-rozovyj-2",
+        "similarity": 0.39089223742485046
+      },
+      {
+        "slug": "usadba-mezyb-shishka-shenen-blan-sovinon-blan-beloe-suhoe-126",
+        "similarity": 0.3872283101081848
+      }
+    ],
+    "geometry_top5": [
+      {
+        "slug": "usadba-mezyb-shishka-pino-nuar-rozovoe-suhoe-115",
+        "similarity": 0.4892476797103882,
+        "geometric_inliers": 0
+      },
+      {
+        "slug": "usadba-mezyb-shishka-oranzh-shardone-beloe-suhoe-127",
+        "similarity": 0.4358159899711609,
+        "geometric_inliers": 0
+      },
+      {
+        "slug": "usadba-mezyb-shishka-kupazh-5-kaberne-sovinon-rozovoe-suhoe-133",
+        "similarity": 0.4066271185874939,
+        "geometric_inliers": 0
+      },
+      {
+        "slug": "zhemchuzhnaya-9-pino-nuar-muskat-rozovyj-2",
+        "similarity": 0.39089223742485046,
+        "geometric_inliers": 0
+      },
+      {
+        "slug": "usadba-mezyb-shishka-shenen-blan-sovinon-blan-beloe-suhoe-126",
+        "similarity": 0.3872283101081848,
+        "geometric_inliers": 0
+      }
+    ],
+    "latency_ms": 705.9728999738581,
+    "ground_truth_available": false
+  },
+  {
+    "image": "02eef911.webp",
+    "baseline_top5": [
+      {
+        "slug": "massandra-muskat-belyy-yuzhnoberezhnyy-beloe-sladkoe-16",
+        "similarity": 0.630619466304779
+      },
+      {
+        "slug": "massandra-muskatel-rozovyy-belye-sorta-vinograda-rozovoe-sladkoe-16",
+        "similarity": 0.6288104057312012
+      },
+      {
+        "slug": "massandra-portveyn-belyy-gurzuf-kokur-belyy-beloe-sladkoe-135",
+        "similarity": 0.6284236907958984
+      },
+      {
+        "slug": "massandra-muskatel-belyy-belye-sorta-vinograda-beloe-sladkoe-16",
+        "similarity": 0.6166961193084717
+      },
+      {
+        "slug": "massandra-bastardo-bastardo-magarachskiy-krasnoe-sladkoe-16",
+        "similarity": 0.6026318669319153
+      }
+    ],
+    "geometry_top5": [
+      {
+        "slug": "massandra-portveyn-belyy-gurzuf-kokur-belyy-beloe-sladkoe-135",
+        "similarity": 0.6284236907958984,
+        "geometric_inliers": 26
+      },
+      {
+        "slug": "massandra-muskatel-rozovyy-belye-sorta-vinograda-rozovoe-sladkoe-16",
+        "similarity": 0.6288104057312012,
+        "geometric_inliers": 22
+      },
+      {
+        "slug": "massandra-rozovoe-suhoe",
+        "similarity": 0.5939770340919495,
+        "geometric_inliers": 21
+      },
+      {
+        "slug": "massandra-kokur",
+        "similarity": 0.542260468006134,
+        "geometric_inliers": 19
+      },
+      {
+        "slug": "massandra-muskatel-belyy-belye-sorta-vinograda-beloe-sladkoe-16",
+        "similarity": 0.6166961193084717,
+        "geometric_inliers": 16
+      }
+    ],
+    "latency_ms": 472.0679000020027,
+    "ground_truth_available": false
+  },
+  {
+    "image": "096ca74e.jpg",
+    "baseline_top5": [
+      {
+        "slug": "shato-ay-danil-bomond-aligote-beloe-suhoe-13",
+        "similarity": 0.3326537013053894
+      },
+      {
+        "slug": "lorio-bryut-rozovoe-igristoe",
+        "similarity": 0.3309803903102875
+      },
+      {
+        "slug": "valeriy-zaharin-aligote-burlyuk-beloe-bryut-115",
+        "similarity": 0.30878475308418274
+      },
+      {
+        "slug": "lorio-bryut-belyj",
+        "similarity": 0.3019542396068573
+      },
+      {
+        "slug": "solnechnaya-dolina-porto-solnechnoy-doliny-kokur-belyy-beloe-sladkoe-175",
+        "similarity": 0.2969054579734802
+      }
+    ],
+    "geometry_top5": [
+      {
+        "slug": "shato-ay-danil-bomond-aligote-beloe-suhoe-13",
+        "similarity": 0.3326537013053894,
+        "geometric_inliers": 0
+      },
+      {
+        "slug": "lorio-bryut-rozovoe-igristoe",
+        "similarity": 0.3309803903102875,
+        "geometric_inliers": 0
+      },
+      {
+        "slug": "valeriy-zaharin-aligote-burlyuk-beloe-bryut-115",
+        "similarity": 0.30878475308418274,
+        "geometric_inliers": 0
+      },
+      {
+        "slug": "lorio-bryut-belyj",
+        "similarity": 0.3019542396068573,
+        "geometric_inliers": 0
+      },
+      {
+        "slug": "solnechnaya-dolina-porto-solnechnoy-doliny-kokur-belyy-beloe-sladkoe-175",
+        "similarity": 0.2969054579734802,
+        "geometric_inliers": 0
+      }
+    ],
+    "latency_ms": 356.72679997514933,
+    "ground_truth_available": false
+  }
+]

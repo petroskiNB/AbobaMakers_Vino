@@ -1,0 +1,32 @@
+{
+  "files": 15803,
+  "extensions": {
+    ".geojson": 19,
+    ".heic": 2,
+    ".jfif": 4,
+    ".jpeg": 19,
+    ".jpg": 276,
+    ".pdf": 3,
+    ".png": 248,
+    ".svg": 4,
+    ".tif": 6,
+    ".tiff": 2,
+    ".webp": 15213,
+    ".xml": 7
+  },
+  "raster_images": 15770,
+  "original_image_files": 6208,
+  "size_variants": 9562,
+  "catalog_provided": true,
+  "training_status": "not_started",
+  "note": "Filename matches are candidates, not verified wine labels.",
+  "csv_rows": 4147,
+  "unique_rows": 2103,
+  "unique_slugs": 2103,
+  "link_statuses": {
+    "candidate": 2021,
+    "ambiguous": 75,
+    "missing": 7
+  },
+  "content_conflict_groups": 46
+}
