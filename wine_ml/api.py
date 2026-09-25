@@ -1,5 +1,7 @@
 """Local evaluation API; product rejection/uncertainty calibration is pending."""
 import io
+import os
+from pathlib import Path
 from contextlib import asynccontextmanager
 from threading import Lock
 
@@ -8,9 +10,6 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from PIL import Image, UnidentifiedImageError
-from wine_ml.core import load_image
-from wine_ml.predict import Recognizer
-from wine_ml.hybrid import HybridRecognizer
 
 recognizer = None
 lock = Lock()
@@ -19,7 +18,19 @@ lock = Lock()
 @asynccontextmanager
 async def lifespan(app):
     global recognizer
-    recognizer = HybridRecognizer() if __import__('pathlib').Path('artifacts/experiment/ocr_index.json').exists() else Recognizer()
+    recognizer = None
+    if os.environ.get('WINE_PREVIEW') == '1':
+        yield
+        return
+    required = ['artifacts/base_model/config.json', 'artifacts/experiment/index.pt',
+                'artifacts/experiment/adapter_best.pt', 'artifacts/experiment/manifest.json']
+    missing = [path for path in required if not Path(path).exists()]
+    if missing:
+        raise RuntimeError('Missing model artifacts: ' + ', '.join(missing)
+                           + '. Restore trained artifacts or use scripts/run.ps1 -Preview for UI testing.')
+    from wine_ml.predict import Recognizer
+    from wine_ml.hybrid import HybridRecognizer
+    recognizer = HybridRecognizer() if Path('artifacts/experiment/ocr_index.json').exists() else Recognizer()
     recognizer.predict(Image.new('RGB', (384, 384), 'white'))
     yield
 
@@ -35,7 +46,7 @@ class PairingRequest(BaseModel):
 
 @app.get('/')
 def home():
-    return FileResponse('web/index.html')
+    return FileResponse('web/index.html', headers={'Cache-Control': 'no-cache'})
 
 
 @app.get('/health')
@@ -44,7 +55,20 @@ def health():
             'pipeline': type(recognizer).__name__ if recognizer else None}
 
 
+@app.get('/manifest.webmanifest')
+def manifest():
+    return FileResponse('web/manifest.webmanifest', media_type='application/manifest+json')
+
+
+@app.get('/sw.js')
+def service_worker():
+    return FileResponse('web/sw.js', media_type='application/javascript',
+                        headers={'Cache-Control': 'no-cache'})
+
+
 def run(image):
+    require_recognizer()
+    from wine_ml.core import load_image
     data = image.file.read(20*1024*1024+1)
     if len(data) > 20*1024*1024:
         raise HTTPException(413, 'Image exceeds 20 MB')
@@ -54,6 +78,11 @@ def run(image):
         raise HTTPException(400, 'Invalid image')
     with lock:
         return recognizer.predict(im)
+
+
+def require_recognizer():
+    if recognizer is None:
+        raise HTTPException(503, 'Режим просмотра: модель не загружена. Для распознавания нужны веса модели и поисковый индекс.')
 
 
 @app.post('/v1/eval/predict')
@@ -70,6 +99,7 @@ def product_predict(image: UploadFile = File(...)):
 
 @app.post('/v1/pairing')
 def pairing(request: PairingRequest):
+    require_recognizer()
     card = recognizer.cards.get(request.slug)
     if not card:
         raise HTTPException(404, 'Wine not found in active index')

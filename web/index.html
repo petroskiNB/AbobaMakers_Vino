@@ -3,12 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#6e173e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Сканер вина">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/static/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
   <title>Сканер российского вина</title>
   <link rel="stylesheet" href="/static/app.css">
 </head>
 <body>
   <main>
     <header><span>СВОЁ ВИНО</span><small>экспериментальный сканер</small></header>
+    <aside class="install-panel" aria-label="Установка приложения">
+      <div><b>Сканер под рукой</b><p id="install-help">Добавьте сканер на главный экран через меню браузера. Распознавание требует подключения к серверу.</p></div>
+      <button id="install" hidden>Установить</button>
+    </aside>
     <section class="hero">
       <p class="eyebrow">ABOBAMAKERS</p>
       <h1>Узнайте вино<br>по этикетке</h1>
@@ -17,6 +27,7 @@
       <img id="preview" alt="Предпросмотр фотографии" hidden>
       <button id="scan" disabled>Распознать</button>
       <p id="message" role="status"></p>
+      <button id="retry" class="secondary">Проверить подключение</button>
     </section>
     <section id="result" class="card" hidden>
       <p id="state" class="state"></p>
@@ -31,5 +42,6 @@
     </section>
   </main>
   <script src="/static/app.js"></script>
+  <script src="/static/pwa.js"></script>
 </body>
 </html>
