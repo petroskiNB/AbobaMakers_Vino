@@ -7,3 +7,6 @@ tmp/
 artifacts/**/*.pt
 artifacts/**/*.npz
 artifacts/base_model/
+.env
+.env.*
+!.env.example

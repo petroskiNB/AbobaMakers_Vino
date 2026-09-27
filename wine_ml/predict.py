@@ -13,14 +13,14 @@ class Recognizer:
     def __init__(self, artifacts='artifacts/experiment'):
         root = Path(artifacts)
         self.encoder = Encoder()
-        index = torch.load(root/'index.pt', weights_only=True)
+        index = torch.load(root/'index.pt', map_location='cpu', weights_only=True)
         if hashlib.sha256((root/'adapter_best.pt').read_bytes()).hexdigest() != index['adapter_sha256']:
             raise ValueError('Adapter and index do not match; rebuild the index')
         if hashlib.sha256((root/'manifest.json').read_bytes()).hexdigest() != index['manifest_sha256']:
             raise ValueError('Manifest and index do not match; rebuild the index')
         if json.loads(Path('artifacts/base_model/source.json').read_text()) != index['source_revision']:
             raise ValueError('Encoder and index do not match; rebuild the features and index')
-        checkpoint = torch.load(root/'adapter_best.pt', weights_only=True)
+        checkpoint = torch.load(root/'adapter_best.pt', map_location='cpu', weights_only=True)
         self.adapter = Adapter(index['dimension']).to(self.encoder.device).eval()
         self.adapter.load_state_dict(checkpoint['state_dict'])
         self.gallery = index['gallery'].to(self.encoder.device)

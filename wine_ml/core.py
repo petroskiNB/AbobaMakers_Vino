@@ -4,7 +4,7 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 from PIL import Image, ImageOps
-from transformers import AutoImageProcessor, SiglipVisionModel
+from transformers import AutoImageProcessor, SiglipVisionConfig, SiglipVisionModel
 
 MODEL_ID = 'google/siglip2-base-patch16-384'
 MODEL_DIR = Path('artifacts/base_model')
@@ -59,7 +59,9 @@ class Encoder:
     def __init__(self, model_dir=MODEL_DIR):
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.processor = AutoImageProcessor.from_pretrained(model_dir, local_files_only=True, use_fast=False)
-        self.model = SiglipVisionModel.from_pretrained(model_dir, local_files_only=True).to(self.device).eval()
+        config = SiglipVisionConfig.from_pretrained(model_dir, local_files_only=True)
+        self.model = SiglipVisionModel.from_pretrained(
+            model_dir, config=config, local_files_only=True).to(self.device).eval()
         if self.device == 'cuda':
             self.model.half()
 

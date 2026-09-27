@@ -8,7 +8,8 @@ from threading import Lock
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from wine_ml.sommelier import recommend, PairingUnavailable
 from PIL import Image, UnidentifiedImageError
 
 recognizer = None
@@ -41,7 +42,7 @@ app.mount('/static', StaticFiles(directory='web'), name='static')
 
 class PairingRequest(BaseModel):
     slug: str
-    dish: str
+    dish: str = Field(min_length=1, max_length=300)
 
 
 @app.get('/')
@@ -103,18 +104,10 @@ def pairing(request: PairingRequest):
     card = recognizer.cards.get(request.slug)
     if not card:
         raise HTTPException(404, 'Wine not found in active index')
-    category = str(card.get('Категория', '')).lower()
-    grape = str(card.get('Сорт винограда', '')).lower()
     dish = request.dish.strip()
     if not dish:
-        raise HTTPException(422, 'Dish is required')
-    if 'игрист' in category or 'брют' in category:
-        advice = 'Игристый стиль хорошо работает с лёгкими закусками, мягкими сырами и блюдами с хрустящей текстурой.'
-    elif 'крас' in category or any(x in grape for x in ['каберне','саперави','мерло']):
-        advice = 'Попробуйте подать к насыщенному мясному блюду, грибам или выдержанному сыру.'
-    elif 'роз' in category:
-        advice = 'Подойдёт к птице, лёгким мясным блюдам, овощам и неострым закускам.'
-    else:
-        advice = 'Подойдёт к рыбе, морепродуктам, птице или свежим сырам.'
-    return {'slug': request.slug, 'dish': dish,
-            'explanation': f'Для блюда «{dish}»: {advice} Это общая гастрономическая рекомендация по данным карточки.'}
+        raise HTTPException(422, 'Укажите блюдо')
+    try:
+        return {'slug': request.slug, **recommend(card, dish)}
+    except PairingUnavailable as exc:
+        raise HTTPException(503, str(exc)) from None

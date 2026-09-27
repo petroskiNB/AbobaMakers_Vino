@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="/static/icons/icon-192.png">
   <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
   <title>Сканер российского вина</title>
-  <link rel="stylesheet" href="/static/app.css">
+  <link rel="stylesheet" href="/static/app.css?v=3">
 </head>
 <body>
   <main>
@@ -37,11 +37,19 @@
       <details><summary>Почему такой результат?</summary><p id="diagnostics"></p></details>
       <hr>
       <h3>К чему подать?</h3>
-      <div class="pairing"><input id="dish" placeholder="Например: запечённая рыба"><button id="pair">Подобрать</button></div>
-      <p id="pairing-result"></p>
+      <div class="pairing"><input id="dish" maxlength="300" aria-label="Блюдо для сочетания с вином" placeholder="Например: запечённая рыба"><button id="pair">Подобрать</button></div>
+      <p id="pairing-result" role="status" aria-live="polite"></p>
+      <div id="pairing-details" hidden>
+        <p id="pairing-score" class="pairing-score"></p>
+        <meter id="pairing-meter" min="0" max="100" low="50" high="75" optimum="90" aria-label="Условная совместимость блюда и вина"></meter>
+        <ul id="pairing-reasons"></ul>
+        <h4>Что попробовать</h4>
+        <ul id="pairing-tips"></ul>
+        <small id="pairing-disclaimer"></small>
+      </div>
     </section>
   </main>
-  <script src="/static/app.js"></script>
+  <script src="/static/app.js?v=4"></script>
   <script src="/static/pwa.js"></script>
 </body>
 </html>

@@ -37,3 +37,9 @@ button:disabled { opacity: .45; cursor: default; }
 #message { min-height: 24px; }
 .low { background: #fff0ca; color: #765500; }
 @media(max-width: 380px) { .hero h1 { font-size: 39px; } .card dl { grid-template-columns: 1fr; } }
+.pairing-score { font-weight: 750; color: #6e173e; margin-bottom: 6px; }
+#pairing-meter { width: 100%; height: 18px; }
+#pairing-details ul { padding-left: 20px; }
+#pairing-details li { margin: 8px 0; }
+#pairing-disclaimer { display: block; color: #67545c; }
+@media(max-width: 380px) { .pairing { flex-direction: column; } }
