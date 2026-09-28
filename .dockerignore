@@ -1,0 +1,9 @@
+**
+!Dockerfile
+!requirements.txt
+!wine_ml/
+!wine_ml/**
+!web/
+!web/**
+**/__pycache__/
+**/*.pyc

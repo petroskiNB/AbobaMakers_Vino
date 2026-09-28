@@ -10,3 +10,5 @@ artifacts/base_model/
 .env
 .env.*
 !.env.example
+test_photo
+wine-deploy.tar.gz

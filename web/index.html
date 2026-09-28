@@ -10,24 +10,24 @@
   <link rel="icon" type="image/png" href="/static/icons/icon-192.png">
   <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
   <title>Сканер российского вина</title>
-  <link rel="stylesheet" href="/static/app.css?v=5">
+  <link rel="stylesheet" href="/static/app.css?v=10">
 </head>
 <body>
   <main>
-    <header><span>СВОЁ ВИНО</span><small>экспериментальный сканер</small></header>
+    <header><span>Своё Вино</span><p class="eyebrow">ABOBAMAKERS</p></header>
     <aside class="install-panel" aria-label="Установка приложения">
       <div><b>Сканер под рукой</b><p id="install-help">Добавьте сканер на главный экран через меню браузера. Распознавание требует подключения к серверу.</p></div>
       <button id="install" hidden>Установить</button>
     </aside>
     <section class="hero">
-      <p class="eyebrow">ABOBAMAKERS</p>
       <h1>Узнайте вино<br>по этикетке</h1>
       <p>Сфотографируйте одну бутылку по центру кадра. Лучше без бликов и соседних этикеток.</p>
-      <label class="upload"><input id="image" type="file" accept="image/*" capture="environment"><b>Выбрать или снять фото</b><span>JPG, PNG, WEBP · до 20 МБ</span></label>
+      <label class="upload"><input id="image" type="file" accept="image/*"><b>Выбрать фото</b><span>JPG, PNG, WEBP · до 20 МБ</span></label>
       <img id="preview" alt="Предпросмотр фотографии" hidden>
       <button id="scan" disabled>Распознать</button>
       <p id="message" role="status"></p>
-      <button id="retry" class="secondary">Проверить подключение</button>
+      <button id="retry" class="secondary" style="font-weight: 700;">Проверить подключение</button>
+      <p id="connection-status" role="status" aria-live="polite"></p>
     </section>
     <section id="result" class="card" hidden>
       <p id="state" class="state"></p>
@@ -49,13 +49,13 @@
         <p id="pairing-score" class="pairing-score"></p>
         <meter id="pairing-meter" min="0" max="100" low="50" high="75" optimum="90" aria-label="Условная совместимость блюда и вина"></meter>
         <ul id="pairing-reasons"></ul>
-        <h4>Что попробовать</h4>
+        <h4 id="pairing-tips-title">Что попробовать</h4>
         <ul id="pairing-tips"></ul>
         <small id="pairing-disclaimer"></small>
       </div>
     </section>
   </main>
-  <script src="/static/app.js?v=5"></script>
+  <script src="/static/app.js?v=8"></script>
   <script src="/static/pwa.js"></script>
 </body>
 </html>
