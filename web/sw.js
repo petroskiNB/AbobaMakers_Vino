@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'wine-scanner-shell-';
-const CACHE_NAME = `${CACHE_PREFIX}v4`;
+const CACHE_NAME = `${CACHE_PREFIX}v5`;
 const SHELL = ['/', '/static/app.css', '/static/app.js', '/static/pwa.js',
   '/manifest.webmanifest', '/static/icons/icon-192.png', '/static/icons/icon-512.png',
   '/static/icons/maskable-512.png', '/static/icons/apple-touch-icon.png'];

@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="/static/icons/icon-192.png">
   <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
   <title>Сканер российского вина</title>
-  <link rel="stylesheet" href="/static/app.css?v=3">
+  <link rel="stylesheet" href="/static/app.css?v=5">
 </head>
 <body>
   <main>
@@ -31,6 +31,12 @@
     </section>
     <section id="result" class="card" hidden>
       <p id="state" class="state"></p>
+      <details id="candidates-panel" class="candidates-panel">
+        <summary>Топ-5 кандидатов</summary>
+        <p>Первый кандидат открыт автоматически. Если этикетка не совпадает, проверьте другие варианты или переснимите фото. Порядок отражает результат поиска, а не вероятность совпадения.</p>
+        <ol id="candidates" aria-label="Кандидаты по убыванию сходства"></ol>
+      </details>
+      <p id="selection-note" role="status"></p>
       <h2 id="title"></h2>
       <dl><div><dt>Винодельня</dt><dd id="winery"></dd></div><div><dt>Регион</dt><dd id="region"></dd></div><div><dt>Виноград</dt><dd id="grape"></dd></div><div><dt>Категория</dt><dd id="category"></dd></div></dl>
       <p id="description"></p>
@@ -49,7 +55,7 @@
       </div>
     </section>
   </main>
-  <script src="/static/app.js?v=4"></script>
+  <script src="/static/app.js?v=5"></script>
   <script src="/static/pwa.js"></script>
 </body>
 </html>

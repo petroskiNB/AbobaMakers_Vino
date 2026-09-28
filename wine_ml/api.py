@@ -95,6 +95,10 @@ def evaluation_predict(image: UploadFile = File(...)):
 def product_predict(image: UploadFile = File(...)):
     result = run(image)
     result['card'] = recognizer.cards[result['slug']]
+    result['candidates'] = [
+        {**candidate, 'card': recognizer.cards[candidate['slug']]}
+        for candidate in result['candidates'][:5]
+    ]
     return result
 
 

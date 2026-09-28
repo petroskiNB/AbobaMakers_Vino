@@ -36,6 +36,16 @@ button:disabled { opacity: .45; cursor: default; }
 .pairing input { min-width: 0; flex: 1; padding: 13px; border: 1px solid #d6c3c8; border-radius: 10px; font-size: 15px; }
 #message { min-height: 24px; }
 .low { background: #fff0ca; color: #765500; }
+.candidates-panel { margin-top: 12px; }
+.candidates-panel summary { cursor: pointer; font-weight: 750; }
+.candidates-panel summary:focus-visible { outline: 3px solid #b36b8b; outline-offset: 3px; }
+.candidates-panel p, #selection-note { font-size: 13px; color: #67545c; }
+#candidates { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+.candidate { width: 100%; text-align: left; white-space: normal; overflow-wrap: anywhere; background: #fff; color: #56102f; border: 2px solid #eadad3; }
+.candidate[aria-pressed="true"] { border-color: #6e173e; background: #f5e5e8; }
+.candidate span, .candidate small { display: block; }
+.candidate small { margin-top: 5px; color: #67545c; font-weight: 400; }
+.card h2, .card dd, #description { overflow-wrap: anywhere; }
 @media(max-width: 380px) { .hero h1 { font-size: 39px; } .card dl { grid-template-columns: 1fr; } }
 .pairing-score { font-weight: 750; color: #6e173e; margin-bottom: 6px; }
 #pairing-meter { width: 100%; height: 18px; }

@@ -49,7 +49,84 @@ el('image').addEventListener('change', event => {
   }
   updateScan();
 });
-el('scan').addEventListener('click',async()=>{if(!selected||!ready||busy||!navigator.onLine)return;busy=true;el('image').disabled=true;updateScan();el('message').textContent='Анализируем этикетку…';el('result').hidden=true;const body=new FormData();body.append('image',selected);try{const response=await fetch('/v1/predict',{method:'POST',body,signal:AbortSignal.timeout(60000)});if(!response.ok)throw new Error((await response.json()).detail||'Ошибка запроса');const data=await response.json();slug=data.slug;clearPairing();const card=data.card;el('state').textContent=data.status==='low_confidence_reshoot'?'Недостаточно уверенности — лучше переснять':'Найден кандидат';el('state').className=data.status==='low_confidence_reshoot'?'state low':'state';el('title').textContent=card['Название вина']||slug;el('winery').textContent=card['Винодельня']||'—';el('region').textContent=card['Регион']||'—';el('grape').textContent=card['Сорт винограда']||'—';el('category').textContent=card['Категория']||'—';el('description').textContent=card['Описание']||'';el('diagnostics').textContent=`Статус: ${data.status}. Время: ${Math.round(data.latency_ms)} мс. Сходство — технический сигнал, а не вероятность. ${data.ocr_text?'OCR: '+data.ocr_text:''}`;el('result').hidden=false;el('message').textContent=''}catch(error){el('message').textContent=error.message}finally{busy=false;el('image').disabled=false;updateScan()}});
+function selectCandidate(candidate, rank) {
+  slug = candidate.slug;
+  clearPairing();
+  const card = candidate.card || {};
+  el('title').textContent = card['Название вина'] || slug;
+  el('winery').textContent = card['Винодельня'] || '—';
+  el('region').textContent = card['Регион'] || '—';
+  el('grape').textContent = card['Сорт винограда'] || '—';
+  el('category').textContent = card['Категория'] || '—';
+  el('description').textContent = card['Описание'] || '';
+  el('selection-note').textContent = rank === 1
+    ? 'Открыт первый кандидат. Подбор блюда относится к этой карточке.'
+    : `Вы выбрали кандидата №${rank}. Подбор блюда относится к выбранной карточке; выбор не подтверждает распознавание.`;
+  el('candidates').querySelectorAll('button').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.slug === slug));
+  });
+}
+
+function showCandidates(data) {
+  const candidates = data.candidates?.length
+    ? data.candidates.slice(0, 5)
+    : [{slug: data.slug, card: data.card}];
+  // Keep compatibility with a server that supplies only the winning card.
+  candidates.forEach(candidate => {
+    if (!candidate.card && candidate.slug === data.slug) candidate.card = data.card;
+  });
+  el('candidates').replaceChildren(...candidates.map((candidate, index) => {
+    const item = document.createElement('li');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'candidate';
+    button.dataset.slug = candidate.slug;
+    button.setAttribute('aria-pressed', 'false');
+    button.disabled = !candidate.card;
+    const title = document.createElement('span');
+    title.textContent = `${index + 1}. ${candidate.card?.['Название вина'] || candidate.slug}`;
+    const subtitle = document.createElement('small');
+    subtitle.textContent = [candidate.card?.['Винодельня'], candidate.card?.['Регион'],
+      candidate.card?.['Категория']].filter(Boolean).join(' · ');
+    button.append(title, subtitle);
+    button.addEventListener('click', () => selectCandidate(candidate, index + 1));
+    item.append(button);
+    return item;
+  }));
+  el('candidates-panel').open = false;
+  selectCandidate(candidates[0], 1);
+}
+
+el('scan').addEventListener('click', async () => {
+  if (!selected || !ready || busy || !navigator.onLine) return;
+  busy = true;
+  slug = null;
+  clearPairing();
+  el('image').disabled = true;
+  updateScan();
+  el('message').textContent = 'Анализируем этикетку…';
+  el('result').hidden = true;
+  const body = new FormData();
+  body.append('image', selected);
+  try {
+    const response = await fetch('/v1/predict', {method: 'POST', body, signal: AbortSignal.timeout(60000)});
+    const data = await response.json();
+    if (!response.ok) throw new Error(typeof data.detail === 'string' ? data.detail : 'Ошибка запроса');
+    const lowConfidence = data.status === 'low_confidence_reshoot';
+    el('state').textContent = lowConfidence ? 'Недостаточно уверенности — лучше переснять' : 'Найден кандидат';
+    el('state').className = lowConfidence ? 'state low' : 'state';
+    showCandidates(data);
+    el('diagnostics').textContent = `Статус поиска: ${data.status}. Время: ${Math.round(data.latency_ms)} мс. Сходство — технический сигнал, а не вероятность. ${data.ocr_text ? 'OCR: ' + data.ocr_text : ''}`;
+    el('result').hidden = false;
+    el('message').textContent = '';
+  } catch (error) {
+    el('message').textContent = error.message;
+  } finally {
+    busy = false;
+    el('image').disabled = false;
+    updateScan();
+  }
+});
 el('dish').addEventListener('input', clearPairing);
 el('dish').addEventListener('keydown', event => {
   if (event.key === 'Enter' && !el('pair').disabled) el('pair').click();
