@@ -8,6 +8,11 @@
 
 - [Архитектура](ARCHITECTURE.md)
 - [Результаты обучения](docs/TRAINING_RESULTS.md)
+- [Контрольный прогон и живое демо](docs/EVALUATION.md)
+
+Оригинальный скрипт кейсодержателя сохранён без изменений в
+`scripts/participant_test.sh`, поскольку каталог `data/` исключён из Git.
+Данные для проверки передаются отдельно.
 
 ## Быстрый запуск интерфейса
 
@@ -76,7 +81,7 @@ curl http://127.0.0.1:8080/health
 
 ## Обучение и оценка
 
-Ожидаемые пути: фотографии `data/foto`, каталог `data/strapi_output0709.csv`, публичные запросы `data/eval/queries` и `data/eval/queries.tsv`. При другом расположении данных измените аргументы соответствующих скриптов.
+Ожидаемые пути: фотографии `data/foto`, каталог `data/strapi_output0709.csv`, публичные запросы `data/queries` и `data/queries.tsv`. При другом расположении данных измените аргументы соответствующих скриптов.
 
 ```powershell
 .\.venv\Scripts\python.exe scripts/prepare_catalog.py --images data/foto --catalog data/strapi_output0709.csv

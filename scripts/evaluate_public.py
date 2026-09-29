@@ -12,8 +12,8 @@ import requests
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--endpoint', default='http://127.0.0.1:8080/v1/eval/predict')
-parser.add_argument('--manifest', type=Path, default=Path('data/eval/queries.tsv'))
-parser.add_argument('--images-dir', type=Path, default=Path('data/eval/queries'))
+parser.add_argument('--manifest', type=Path, default=Path('data/queries.tsv'))
+parser.add_argument('--images-dir', type=Path, default=Path('data/queries'))
 parser.add_argument('--output', type=Path, default=Path('artifacts/public_predictions.jsonl'))
 args = parser.parse_args()
 args.output.parent.mkdir(parents=True, exist_ok=True)

@@ -61,11 +61,12 @@ calibration.json нельзя выдавать за качество публи�
 
 ## Контрольный скрипт кейсодержателя
 
-Оригинал `data/participant_test.sh` оставлен без изменений. На Linux с bash,
+Оригинал сохранён без изменений в `scripts/participant_test.sh` (копия из
+`data/participant_test.sh`, чтобы скрипт входил в Git). На Linux с bash,
 curl, jq и awk выполните:
 
 ```bash
-bash data/participant_test.sh --images-dir data/queries --manifest data/queries.tsv --endpoint http://127.0.0.1:8080/v1/eval/predict --output artifacts/organizer-public-01.jsonl
+bash scripts/participant_test.sh --images-dir data/queries --manifest data/queries.tsv --endpoint http://127.0.0.1:8080/v1/eval/predict --output artifacts/organizer-public-01.jsonl
 ```
 
 Для Windows можно использовать WSL с установленными утилитами и доступным из

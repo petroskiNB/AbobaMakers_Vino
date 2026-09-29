@@ -12,3 +12,8 @@ artifacts/base_model/
 !.env.example
 test_photo
 wine-deploy.tar.gz
+*.log
+yandex.env
+Thumbs.db
+Desktop.ini
+.DS_Store

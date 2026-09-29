@@ -7,7 +7,7 @@ from pathlib import Path
 import requests
 
 endpoint = 'http://127.0.0.1:8080/v1/eval/predict'
-images = sorted(Path('data/eval/queries').iterdir())
+images = sorted(Path('data/queries').iterdir())
 measurements = []
 for _ in range(2):
     for path in images:
