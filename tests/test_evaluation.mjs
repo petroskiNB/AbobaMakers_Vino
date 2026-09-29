@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {metrics,parseTSV} from '../web/evaluation.mjs';
+const row={query_id:'q',ok:true,latency_ms:3000,predicted_slug:'a',top5:['a','b','c','d','e']};
+const m=metrics([row],new Map([['q','a']]));
+assert.equal(m.quality.micro_f1_top1,1);
+assert.equal(m.quality.micro_f1_top5,1/3);
+assert.equal(m.successful_under_3s,0);
+assert.equal(metrics([row],null).quality,null);
+assert.equal(metrics([{...row,ok:false}],new Map([['q','a']])).quality.micro_f1_top1,0);
+assert.throws(()=>parseTSV('query_id\texpected_slug\nq\ta\nq\tb',['query_id','expected_slug']));
+console.log('Browser evaluation metrics: passed');

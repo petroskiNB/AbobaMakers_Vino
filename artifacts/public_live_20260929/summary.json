@@ -1,0 +1,17 @@
+{
+  "queries": 3,
+  "successful_responses": 0,
+  "latency_ms": {
+    "mean": 25.027,
+    "p50": 24.388,
+    "p95_nearest_rank": 30.711,
+    "max": 30.711
+  },
+  "successful_under_3s": 0,
+  "quality": null,
+  "quality_note": "Ground truth unavailable; HTTP success is not recognition accuracy.",
+  "endpoint": "https://abobawines.ru/v1/predict",
+  "manifest_sha256": "3088fed2c7e421d919b31d6fe118ca9243f0ec0a8f9f047c1cfd255dab3dce1b",
+  "labels_sha256": null,
+  "protocol": "Sequential HTTP, no retries, no excluded warmup; includes failed requests"
+}

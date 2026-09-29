@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Проверка распознавания — Своё Вино</title>
+<style>
+body{font:16px/1.6 Arial,sans-serif;background:#fff8f3;color:#30292d;margin:0}main{max-width:1050px;margin:auto;padding:30px}h1,h2{font-family:Georgia,serif;color:#6e173e}section{background:white;padding:22px;border-radius:16px;margin:20px 0}button{background:#6e173e;color:white;border:0;padding:14px;border-radius:10px;cursor:pointer}button:disabled{opacity:.5}label{display:block;margin:16px 0}table{border-collapse:collapse;width:100%}td,th{padding:10px;border-bottom:1px solid #ddd;text-align:left;overflow-wrap:anywhere}.scroll{overflow:auto}small{color:#67545c}#status{min-height:26px}input{max-width:100%}
+</style>
+<main><a href="/">← Сканер</a><h1>Живой прогон распознавания</h1>
+<p>Последовательные запросы к работающей модели. Время включает загрузку фото, сеть, очередь и ответ API.</p>
+<section><h2>Набор для проверки</h2>
+<label>Манифест queries.tsv (query_id, image_path)<br><input id="manifest" type="file" accept=".tsv"></label>
+<label>Фотографии набора<br><input id="images" type="file" accept="image/*" multiple></label>
+<label>Независимая разметка TSV — необязательно (query_id, expected_slug)<br><input id="labels" type="file" accept=".tsv"></label>
+<label>Источник разметки: <select id="origin"><option value="team">Ручная разметка команды</option><option value="organizer">Разметка организаторов</option></select></label>
+<small>Без разметки F1 не вычисляется. Разметка остаётся в браузере; сервер получает только фотографии. Требуется один правильный slug на запрос. Имена выбранных файлов должны совпадать с image_path.</small>
+<p><button id="start">Запустить прогон</button> <button id="download" disabled>Скачать результаты JSON</button></p>
+<p id="status" role="status"></p><p id="summary" aria-live="polite"></p>
+<div class="scroll"><table><thead><tr><th>Запрос</th><th>Время, с</th><th>Топ-1</th><th>Топ-5</th></tr></thead><tbody id="rows"></tbody></table></div>
+</section>
+<section><h2>Как считается F1</h2>
+<p>Для k=1 и k=5 используется одна формула: micro-F1@k = 2TP / (2TP + FP + FN). TP — правильные кандидаты, FP — остальные возвращённые кандидаты, FN — правильные ответы, не попавшие в список.</p>
+<p>При одном правильном вине и пяти кандидатах максимальный F1@5 равен 33,33%. Это свойство оценки списка как множества. Recall@5 (попадание в пятёрку) показывается отдельно. Формула F1@5 явно определена здесь и может отличаться от методики организаторов.</p>
+<p>HTTP 200 не означает правильного совпадения. Ошибки учитываются как пропущенный правильный ответ. Порог скорости — строго меньше 3 секунд. Прогон не вызывает YandexGPT.</p>
+</section><section><h2>Сохранённый синтетический тест</h2><p>Это отдельная оценка адаптера по сохранённым признакам, не публичные фото и не замер скорости API. Метки происходят из предварительных связей каталога.</p><p id="synthetic">Загрузка результатов…</p></section>
+</main><script type="module" src="/static/evaluation.mjs"></script></html>

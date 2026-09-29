@@ -1,0 +1,18 @@
+{
+  "queries": 586,
+  "successful_responses": 586,
+  "quality": {
+    "accuracy_top1": 0.931740614334471,
+    "macro_f1_top1": 0.8594427244582044,
+    "micro_set_f1_at_1": 0.931740614334471,
+    "recall_at_5": 1.0,
+    "micro_precision_at_5": 0.2,
+    "micro_set_f1_at_5": 0.3333333333333333,
+    "classes_in_macro_average": 323
+  },
+  "quality_note": "Top1 macro-F1 uses union of true and predicted classes. Top5 is a set: micro F1=2*hits/(returned candidates+queries). One relevant slug per query; this is not an organizer-approved F1@5 definition.",
+  "dataset": "synthetic_saved_test",
+  "label_source": "provisional_catalog_links",
+  "adapter_sha256": "333529966df2ec09d14042d49b0339964a1ceda2caa965bca133b8c6158c866e",
+  "note": "Recomputed from saved synthetic features; not API latency or public dataset quality."
+}

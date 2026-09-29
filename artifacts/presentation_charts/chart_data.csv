@@ -1,0 +1,8 @@
+﻿dataset,model,metric,value,unit,queries
+synthetic_test,baseline,accuracy_at_1,90.78498482704163,percent,586
+synthetic_test,adapter,accuracy_at_1,93.17406415939331,percent,586
+synthetic_test,baseline,macro_f1,92.50446936453763,percent,586
+synthetic_test,adapter,macro_f1,94.74402730375428,percent,586
+public_local_warm_benchmark,api,mean,1.0542239166679792,seconds,6
+public_local_warm_benchmark,api,p50,1.055719199939631,seconds,6
+public_local_warm_benchmark,api,p95_nearest_rank,1.1207365000154823,seconds,6
